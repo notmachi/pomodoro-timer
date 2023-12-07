@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pomodoro Timer </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="timer-select">
+            <div class="timer-option active" id="pomodoro" onclick="setPomodoro()"><span> Pomodoro </span></div>
+            <div class="timer-option" id="shortBreak" onclick="setShortBreak()"><span> Short Break </span></div>
+            <div class="timer-option" id="longBreak" onclick="setLongBreak()"><span> Long Break </span></div>
+        </div>
+        <div class="timer">
+            <span> 25:00 </span>
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle id="progress-bar" cx="50" cy="50" r="45" stroke-dasharray="283 283"/>
+            </svg>
+        </div>
+        <div class="buttons">
+            <button id="reset-btn" onclick="resetTimer()"> &#8634; </button>
+            <button id="timer-btn" onclick="toggleTimer()"> Start Timer </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
